@@ -8,6 +8,15 @@ mkdir ~/BIP_2022/usr/lib
 mkdir ~/BIP_2022/home
 mkdir ~/BIP_2022/home/username
 
+# if necessary, install tree
+sudo apt install tree
+
+# if necessary, update apt
+sudo apt update
+
+# if necessary, install tree
+sudo apt install tree
+
 # check directory structure
 tree ~/BIP_2022
 
