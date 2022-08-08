@@ -23,10 +23,10 @@ fastqc SRR8288560.fastq.gz --extract
 # Local Shell
 ##
 # copy the file Tribolium_castaneum.gff3 from your local host to the remote servers
-scp Tribolium_castaneum.gff3 your_username@crcfe01.crc.nd.edu:/BIP_2022/data
+scp Tribolium_castaneum.gff3 your_username@crcfe01.crc.nd.edu:/afs/crc.nd.edu/user/your_initial/your_username/BIP_2022/data
 
 # copy the file Tribolium_castaneum.gff3 from your local host to the remote servers
-scp Tribolium_castaneum.genome.fa your_username@crcfe01.crc.nd.edu:/BIP_2022/data
+scp Tribolium_castaneum.genome.fa your_username@crcfe01.crc.nd.edu:/afs/crc.nd.edu/user/your_initial/your_username/BIP_2022/data
 
 
 ##
