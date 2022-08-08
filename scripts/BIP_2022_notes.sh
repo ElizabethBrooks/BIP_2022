@@ -19,4 +19,4 @@ tree
 git clone https://github.com/tracykteal/msu_al340.git
 
 # check updated directory structure
-tree ~/BIP_2022
+tree
