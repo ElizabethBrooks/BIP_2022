@@ -1,12 +1,10 @@
 #!/bin/bash
+#$ -M netid@nd.edu
+#$ -m abe
+#$ -r n
+#$ -N BIP_2022_script_jobOutput
 
 # BASH shell script to collect and prepare omics data for biostatistical analysis
-
-##
-# Servers
-##
-# load bio module
-module load bio
 
 # prefetch sample fastq files
 prefetch SRR8288561 SRR8288562 SRR8288563 SRR8288564 SRR8288557 SRR8288560 SRR8288558 SRR8288559 SRR8288565 SRR8288566 SRR8288567 SRR8288568
@@ -18,20 +16,6 @@ fastq-dump --gzip SRR8288558; fastq-dump --gzip SRR8288559; fastq-dump --gzip SR
 # qc a sample
 fastqc SRR8288560.fastq.gz --extract
 
-
-##
-# Local Shell
-##
-# copy the file Tribolium_castaneum.gff3 from your local host to the remote servers
-scp Tribolium_castaneum.gff3 your_username@crcfe01.crc.nd.edu:/afs/crc.nd.edu/user/your_initial/your_username/BIP_2022/data
-
-# copy the file Tribolium_castaneum.gff3 from your local host to the remote servers
-scp Tribolium_castaneum.genome.fa your_username@crcfe01.crc.nd.edu:/afs/crc.nd.edu/user/your_initial/your_username/BIP_2022/data
-
-
-##
-# Servers
-##
 # convert gff3 file to gtf
 gffread -E -F -T Tribolium_castaneum.gff3 -o Tribolium.gtf
 

@@ -1,7 +1,6 @@
-# R script to quantify transcriptomic data for the red flour beetle
+#!/usr/bin/env Rscript
 
-# set the working directory
-setwd("/YOUR/DIRECTORY/PATH")
+# R script to quantify transcriptomic data for the red flour beetle
 
 # install the BiocManager followed by the Rsubread package, if necessary
 if (!require("BiocManager", quietly = TRUE))
@@ -10,9 +9,6 @@ BiocManager::install("Rsubread")
 
 # load the Rsubread library
 library("Rsubread")
-
-# checkout information for the featureCounts command
-?featureCounts
 
 # quantify read fragments that align (map) to general features
 # contrl samples at 4h
